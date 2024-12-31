@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    letter-spacing: 0.6px;
+    overflow: hidden;
+    background: linear-gradient(to bottom,#fff,#f6f6f6);
+    height: 100vh;
+    padding: 80px 40px;
+}
+body .title{
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    background-color: #009688;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 400px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.slider-container:hover {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08) ;
+}
+.slider-container img {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+    z-index: 1;
+    border-radius: 20px;
+}
+.slider-container img.active {
+    opacity: 1;
+}
+.slider-container .slide-number {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    z-index: 2;
+}
+.slider-controls {
+    width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+.slider-controls .prev,
+.slider-controls .next {
+    background-color: #009688;
+    color: #fff;
+    font-size: 18px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 20%;
+    cursor: pointer;
+}
+.slider-controls .prev {
+    float: left;
+}
+.slider-controls .next {
+    float: right;
+}
+.slider-controls .prev.disabled,
+.slider-controls .next.disabled {
+    background-color: rgba(0, 150, 136, 0.5);
+    cursor: no-drop;
+}
+.slider-controls .paginations {
+    width: 60%;
+    float: left;
+}
+.slider-controls .paginations ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+.slider-controls .paginations ul li {
+    display: inline-block;
+    background-color: #f6f6f6;
+    color: #333;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    margin: 0 4px;
+    line-height: 28px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.slider-controls .paginations ul li.active {
+    background-color: #009688;
+    border-radius: 4px;
+    color: #fff;
+}
